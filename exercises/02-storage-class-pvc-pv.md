@@ -65,6 +65,7 @@ kubectl get pv -n playground
 ```
 
 Instead the `PV` should only be provisioned once the `Pod` actually requests the `PVC` therefore we can go ahead and deploy the "Pod-1":
+TODO: can we add some topology constraints here and showcase them?
 
 ```bash
 kubectl apply -f resources/pod-1.yaml

@@ -1,60 +1,9 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "docker-machine-kvm2": {
-      "resolved": "github:NixOS/nixpkgs/1666250dbe4141e4ca8aaf89b40a3a51c2e36144?narHash=sha256-sImk6SJQASDLQo8l%2B0zWWaBgg7TueLS6lTvdH5pBZpo%3D#docker-machine-kvm2",
-      "source": "nixpkg"
-    },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
       "last_modified": "2025-10-27T19:50:41Z",
       "resolved": "github:NixOS/nixpkgs/1666250dbe4141e4ca8aaf89b40a3a51c2e36144?lastModified=1761594641&narHash=sha256-sImk6SJQASDLQo8l%2B0zWWaBgg7TueLS6lTvdH5pBZpo%3D"
-    },
-    "gnumake": {
-      "resolved": "github:NixOS/nixpkgs/d7f52a7a640bc54c7bb414cca603835bf8dd4b10?narHash=sha256-krgZxGAIIIKFJS%2BUB0l8do3sYUDWJc75M72tepmVMzE%3D#gnumake",
-      "source": "nixpkg",
-      "systems": {
-        "x86_64-linux": {
-          "outputs": [
-            {
-              "path": "/nix/store/ahxj2q2mrl9z2k77ahqsl9j4zxq1wf84-gnumake-4.4.1",
-              "default": true
-            },
-            {
-              "name": "man",
-              "path": "/nix/store/ha44mgbdcrzgah0dnjd28ax4hrdkc4mm-gnumake-4.4.1-man",
-              "default": true
-            }
-          ]
-        }
-      }
-    },
-    "kvmtool@latest": {
-      "last_modified": "2025-10-22T20:59:19Z",
-      "resolved": "github:NixOS/nixpkgs/01b6809f7f9d1183a2b3e081f0a1e6f8f415cb09#kvmtool",
-      "source": "devbox-search",
-      "version": "0-unstable-2024-04-09",
-      "systems": {
-        "aarch64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/hhzrn0539ahs1360a1fxn363rdbxkdi3-kvmtool-0-unstable-2024-04-09",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/hhzrn0539ahs1360a1fxn363rdbxkdi3-kvmtool-0-unstable-2024-04-09"
-        },
-        "x86_64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/nd8qxzq25ccsd251cz4mm3pj4h6ghh8a-kvmtool-0-unstable-2024-04-09",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/nd8qxzq25ccsd251cz4mm3pj4h6ghh8a-kvmtool-0-unstable-2024-04-09"
-        }
-      }
     },
     "minikube@latest": {
       "last_modified": "2025-11-02T15:04:35Z",
