@@ -45,8 +45,8 @@ kubectl get volumesnapshot pvc-snapshot -n playground
 Once the `VolumeSnapshot` is ready to use we can delete the `PVC` and the `Pod`:
 
 ```bash
-kubectl delete -f resources/pvc-snapshot.yaml
 kubectl delete -f resources/pod.yaml
+kubectl delete -f resources/pvc-snapshot.yaml
 ```
 
 Now to restore a `VolumeSnapshot` we need to define the datasource in the `PVC`. To achieve this edit the `../resouces/pvc-snapshot.yaml` and add the `dataSource` field with the correct definitions. Once the changes are done compare it with the solution below and apply the resource to your cluster togheter with the `Pod`.
@@ -86,6 +86,12 @@ kubectl exec -n playground data-writer -- cat /mnt/data/test.txt
 
 ## Cleanup
 
+Reset the `resources`:
+```bash
+git restore resources/pvc.yaml
+```
+
+Delete the cluster resources:
 ```bash
 kubectl delete pod data-writer -n playground
 kubectl delete pvc pvc-claim -n playground

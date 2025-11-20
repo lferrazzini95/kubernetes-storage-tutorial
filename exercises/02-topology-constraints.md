@@ -51,7 +51,12 @@ kubectl delete storageclass standard
 kubectl apply -f resources/storageclass.yaml
 ```
 
-Now let's reapply the `PVC`:
+Additionally the storage provider service account needs access to read node properties. For this we need to deploy the prepared `../resources/clusterrolebinding.yaml`:
+```bash
+kubectl apply -f resources/clusterrolebinding.yaml
+```
+
+Now we are ready to reapply the `PVC`:
 ```bash
 kubectl apply -f resources/pvc.yaml
 ```
@@ -110,6 +115,14 @@ Now we can apply `nodeAffinity` rules to the `Pod` and the storage will follow t
 
 ## Cleanup
 
+Reset the `resources`:
+```bash
+git restore resources/pod.yaml
+```
+
+Delete the cluster resources:
+```
+```
 ```bash
 kubectl delete pod data-writer -n playground
 kubectl delete pvc pvc-claim -n playground

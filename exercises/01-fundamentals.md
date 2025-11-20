@@ -71,7 +71,8 @@ kubectl get pv -n playground
 Now the `PV` is ready to be consumed by a `Pod`. Checkout the `../resources/pod.yaml` and deploy it. Make sure to understand where the `Pod` defined the binding to the `PVC`. Once the `Pod` pod is deployed we can check if it is running with:
 
 ```bash
-kubectl get pods -n playground
+kubectl apply -f resources/pod.yaml
+kubectl get pods -n playground -w
 ```
 
 ## Clean Up
@@ -79,8 +80,8 @@ kubectl get pods -n playground
 Clean up the created resources from above:
 
 ```bash
-kubectl delete -f resources/pvc.yaml
 kubectl delete -f resources/pod.yaml
+kubectl delete -f resources/pvc.yaml
 ```
 
 

@@ -4,6 +4,6 @@ metadata:
   name: pvc-snapshot
   namespace: playground
 spec:
-  volumeSnapshotClassName: csi-hostpath-snapclass
+  volumeSnapshotClassName: csi-hostpath-sc
   source:
     persistentVolumeClaimName: pvc-claim
