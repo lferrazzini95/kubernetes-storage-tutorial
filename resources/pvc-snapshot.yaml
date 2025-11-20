@@ -4,9 +4,14 @@ metadata:
   name: pvc-claim
   namespace: playground
 spec:
+  storageClassName: csi-hostpath-sc
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
-  storageClassName: standard
+# when restoring add the following
+  # dataSource:
+  #   name: <pvc-name>
+  #   kind: <datasource-kind>
+  #   apiGroup: snapshot.storage.k8s.io
